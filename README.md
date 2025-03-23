@@ -79,5 +79,5 @@ Run `hard_prompts/prompt_H.py` for hard prompts.
 
 1.Save your trained models and create and put them in 'best_model'.
 
-2.Run `soft_prompts/relevant_KI.py` for identification.
+2.Run `soft_prompts/identification.py` for identification.
 
