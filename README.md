@@ -33,7 +33,7 @@ TU-Android([TU-Android](http://oscar-lab.org/paper/API/)) from ``A More Accurate
 
 SO-Android([SO-Android](https://zenodo.org/records/6944137#.YuVEFurP1Jw)) from ``Retrieving API Knowledge from Tutorials and Stack Overflow Based on Natural Language Queries``
 
-### Model Training
+### Model Tuning
 
 Run `soft_prompts/irkpt.py` for training. The following are three alternative model fusion strategies available:
 
