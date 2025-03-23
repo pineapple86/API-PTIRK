@@ -63,7 +63,7 @@ class AttentionFusion(nn.Module):
 ```
 
 ```python
-class ConcatenationFusion(nn.Module):
+class SplcingFusion(nn.Module):
     def __init__(self, logits_dim):
         super(ConcatenationFusion, self).__init__()
         self.fc = nn.Linear(logits_dim * 2, logits_dim)
