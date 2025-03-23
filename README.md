@@ -74,3 +74,10 @@ class ConcatenationFusion(nn.Module):
 ```
 
 You can run `hard_prompts/prompt_H.py` for hard prompts.
+
+### User study
+
+1.Save your trained models and create and put them in 'best_model'.
+
+2.Run `soft_prompts/relevant_KI.py` for identification.
+
