@@ -5,7 +5,9 @@
 ## Quick Start
 
 ### Download Pretrained Models
-Dynamic Prompt Generator ([BERT-Based Classifier Model](https://huggingface.co/bert-base-uncased))
+Text model
+([BERT Model]([https://huggingface.co/bert-base-uncased])
+([STencentBERT Model]([https://huggingface.co/sentence-transformers/all-mpnet-base-v2])
 
 Joint Extractor ([T5-Based Extractor Model](https://drive.google.com/file/d/15OFkWw8kJA1k2g_zehZ0pxcjTABY2iF1/view))
 
