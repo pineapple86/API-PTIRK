@@ -73,7 +73,7 @@ class ConcatenationFusion(nn.Module):
         return combined_logits
 ```
 
-You can run `hard_prompts/prompt_H.py` for hard prompts.
+Run `hard_prompts/prompt_H.py` for hard prompts.
 
 ### User study
 
