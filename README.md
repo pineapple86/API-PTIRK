@@ -40,16 +40,13 @@ SO-Android([SO-Android](https://zenodo.org/records/6944137#.YuVEFurP1Jw)) from `
 Run `hard_prompts/prompt_H.py` for training. The following are three alternative model fusion strategies available:
 
 ```python
-class AttentionFusion(nn.Module):
-    def __init__(self, logits_dim):
-        super(AttentionFusion, self).__init__()
-        self.attn = nn.Linear(logits_dim * 2, 2)
+class WeightedAverageFusion(nn.Module):
+    def __init__(self, weight_code=0.5, weight_text=0.5):
+        super(WeightedAverageFusion, self).__init__()
+        self.weight_code = weight_code
+        self.weight_text = weight_text
     def forward(self, logits_code, logits_text):
-        combined_input = torch.cat((logits_code, logits_text), dim=-1)
-        attn_weights = torch.softmax(self.attn(combined_input), dim=-1)
-        weight_code = attn_weights[:, 0].unsqueeze(-1)
-        weight_text = attn_weights[:, 1].unsqueeze(-1)
-        combined_logits = weight_code * logits_code + weight_text * logits_text
+        combined_logits = self.weight_code * logits_code + self.weight_text * logits_text
         return combined_logits
 ```
 
@@ -66,10 +63,7 @@ class AttentionFusion(nn.Module):
         combined_logits = weight_code * logits_code + weight_text * logits_text
         return combined_logits
 ```
-```python
-def combine_logits(logits_code, logits_text, weight_code=0.5, weight_text=0.5):
-    return weight_code * logits_code + weight_text * logits_text
-```
+
 ```python
 class ConcatenationFusion(nn.Module):
     def __init__(self, logits_dim):
