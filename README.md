@@ -35,8 +35,20 @@ SO-Android([SO-Android](https://zenodo.org/records/6944137#.YuVEFurP1Jw)) from `
 
 ### Model Training
 
-Training model as follows:
+#### Hard prompts
 
-1.Run `classifier/my_classifier.py` to train Generator
+Run `hard_prompts/prompt_H.py` for training. The following are three alternative model fusion strategies available:
+
+class AttentionFusion(nn.Module):
+    def __init__(self, logits_dim):
+        super(AttentionFusion, self).__init__()
+        self.attn = nn.Linear(logits_dim * 2, 2)
+    def forward(self, logits_code, logits_text):
+        combined_input = torch.cat((logits_code, logits_text), dim=-1)
+        attn_weights = torch.softmax(self.attn(combined_input), dim=-1)
+        weight_code = attn_weights[:, 0].unsqueeze(-1)
+        weight_text = attn_weights[:, 1].unsqueeze(-1)
+        combined_logits = weight_code * logits_code + weight_text * logits_text
+        return combined_logits
 
 2.Run `main.py` to train Extractor
