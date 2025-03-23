@@ -35,9 +35,7 @@ SO-Android([SO-Android](https://zenodo.org/records/6944137#.YuVEFurP1Jw)) from `
 
 ### Model Training
 
-#### Hard prompts
-
-Run `hard_prompts/prompt_H.py` for training. The following are three alternative model fusion strategies available:
+Run `soft_prompts/irkpt.py` for training. The following are three alternative model fusion strategies available:
 
 ```python
 class WeightedAverageFusion(nn.Module):
@@ -75,4 +73,4 @@ class ConcatenationFusion(nn.Module):
         return combined_logits
 ```
 
-2.Run `main.py` to train Extractor
+You can run `hard_prompts/prompt_H.py` for hard prompts.
