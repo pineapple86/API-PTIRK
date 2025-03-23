@@ -53,5 +53,32 @@ class AttentionFusion(nn.Module):
         return combined_logits
 ```
 
+```python
+class AttentionFusion(nn.Module):
+    def __init__(self, logits_dim):
+        super(AttentionFusion, self).__init__()
+        self.attn = nn.Linear(logits_dim * 2, 2)
+    def forward(self, logits_code, logits_text):
+        combined_input = torch.cat((logits_code, logits_text), dim=-1)
+        attn_weights = torch.softmax(self.attn(combined_input), dim=-1)
+        weight_code = attn_weights[:, 0].unsqueeze(-1)
+        weight_text = attn_weights[:, 1].unsqueeze(-1)
+        combined_logits = weight_code * logits_code + weight_text * logits_text
+        return combined_logits
+```
+```python
+def combine_logits(logits_code, logits_text, weight_code=0.5, weight_text=0.5):
+    return weight_code * logits_code + weight_text * logits_text
+```
+```python
+class ConcatenationFusion(nn.Module):
+    def __init__(self, logits_dim):
+        super(ConcatenationFusion, self).__init__()
+        self.fc = nn.Linear(logits_dim * 2, logits_dim)
+    def forward(self, logits_code, logits_text):
+        combined_input = torch.cat((logits_code, logits_text), dim=-1)
+        combined_logits = self.fc(combined_input)
+        return combined_logits
+```
 
 2.Run `main.py` to train Extractor
