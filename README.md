@@ -8,7 +8,7 @@
 
 #### Text model
 
-BERT Model([BERT][https://huggingface.co/bert-base-uncased])
+BERT Model ([BERT](https://huggingface.co/bert-base-uncased))
 or
 StencentBERT Model([StencentBERT][https://huggingface.co/sentence-transformers/all-mpnet-base-v2])
 
