@@ -70,11 +70,9 @@ class SplcingFusion(nn.Module):
         return combined_logits
 ```
 
-Run `hard_prompts/prompt_H.py` for hard prompts.
-
-### User study
+### Identify
 
 1.Save your trained models and create and put them in 'best_model'.
 
-2.Run `user_study/identification.py` for identification.
+2.Run `identification/identification.py` for identification.
 
