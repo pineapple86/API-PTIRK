@@ -5,17 +5,15 @@
 
 ### Download Pretrained Models
 
-#### Text model
+#### Apply Prompt Tuing to these models for KIT
 
 BERT Model ([BERT](https://huggingface.co/bert-base-uncased)) or StencentBERT Model([StencentBERT](https://huggingface.co/sentence-transformers/all-mpnet-base-v2))
 
-Create 'pre_models_text' and put all text models to 'pre_models_text' for training.
-
-#### Code model
+#### Apply Prompt Tuing to these models for KIC
 
 CodeBERT Model([CodeBERT](https://huggingface.co/microsoft/codebert-base)) or CodeT5 Model([CodeT5](https://huggingface.co/Salesforce/codet5-small))
 
-Create 'pre_models_code' and put all code models to 'pre_models_code' for training.
+Create 'pre_models' and put all models to 'pre_models' for training.
 
 ### Download Datasets
 
