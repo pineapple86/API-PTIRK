@@ -1,6 +1,5 @@
 # IRKPT
 - Code for ``Identifying Relevant API Knowledge from API tutorial and Stack Overflow with Prompt Tuning``
-- Please contact 3199895801@qq.com for questions and suggestions.
 
 ## Quick Start
 
