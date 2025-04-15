@@ -1,4 +1,4 @@
-# IRKPT
+# PTIRK
 - Code for ``Identifying Relevant API Knowledge from API tutorial and Stack Overflow with Prompt Tuning``
 
 ## Quick Start
@@ -32,7 +32,7 @@ SO-Android([SO-Android](https://zenodo.org/records/6944137#.YuVEFurP1Jw)) from `
 
 ### Model Tuning
 
-Run `soft_prompts/irkpt.py` for training. The following are three alternative model fusion strategies available:
+Run `soft_prompts/ptirk.py` for training. The following are three alternative model fusion strategies available:
 
 ```python
 class WeightedAverageFusion(nn.Module):
@@ -72,7 +72,7 @@ class SplcingFusion(nn.Module):
 
 ### Identify
 
-1.Save your trained models and create and put them in 'best_model'.
+1. Save your trained models and create and put them in 'best_model'.
 
-2.Run `identification/identification.py` for identification.
+2. Run `identification/identification.py` for identification.
 
