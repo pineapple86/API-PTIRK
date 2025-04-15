@@ -1,5 +1,5 @@
 # PTIRK
-- Code for ``Identifying Relevant API Knowledge from API tutorial and Stack Overflow with Prompt Tuning``
+- Code for ``Using Prompt Tuning to Identify Relevant API Knowledge from API Tutorial and Stack Overflow``
 
 ## Quick Start
 
