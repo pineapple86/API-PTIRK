@@ -81,6 +81,6 @@ class SplcingFusion(nn.Module):
 
 The nine APIs we randomly selected for the user study and the usefulness scores scored by the participants can be found in `user study`.
 
-### User Study
+### Supplementary Experiments
 
 Additional supplementary experiments we designed for RQ1, RQ3, and RQ4 can be found in `supplementary experiments`.
