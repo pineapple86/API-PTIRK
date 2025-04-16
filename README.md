@@ -84,3 +84,16 @@ The nine APIs we randomly selected for the user study and the usefulness scores 
 ### Supplementary Experiments
 
 Additional supplementary experiments we designed for RQ1, RQ3, and RQ4 can be found in `supplementary experiments`.
+
+#### For RQ1
+
+We conduct 32 supplementary experiments for RQ2, that is, randomly matching pre-trained code models (CodeBERT or CodeT5), pre-trained text models (BERT or StenceBERT), and model fusion strategies (weighted average fusion strategy, attention fusion strategy, splicing fusion strategy, or gating fusion strategy) on two datasets. In terms of FMeasure, in the 32 groups of experiments, 23 groups using soft prompts outperforms the other two prompt methods, meaning 71.88% of the results can confirm this view.
+
+#### For RQ3
+
+We conduct 24 supplementary experiments for RQ3, that is, randomly matching the prompt methods (hard prompts, soft prompts, or mixed prompts) and model fusion
+strategies (weighted average fusion strategy, attention fusion strategy, splicing fusion strategy, or gating fusion strategy) on two datasets. In terms of F-Measure, 23 of the 24 groups of experiments, combining CodeBERT with BERT outperforms the other three pre-trained model combinations, meaning 95.83% of the results can confirm this view
+
+#### For RQ4
+
+We conduct 24 supplementary experiments for RQ4, that is, randomly matching pre-trained code models (CodeBERT or CodeT5), pre-trained text models (BERT or StenceBERT), and prompt methods (hard prompts, soft prompts, or mixed prompts) on two datasets. In terms of F-Measure, 17 of 24 experiment groups, using gating fusion strategy outperforms the other three model fusion strategies, meaning 70.83% of the results support this view.
