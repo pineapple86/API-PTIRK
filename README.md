@@ -87,7 +87,7 @@ Additional supplementary experiments we designed for RQ1, RQ3, and RQ4 can be fo
 
 #### For RQ1
 
-We conduct 32 supplementary experiments for RQ2, that is, randomly matching pre-trained code models (CodeBERT or CodeT5), pre-trained text models (BERT or StenceBERT), and model fusion strategies (weighted average fusion strategy, attention fusion strategy, splicing fusion strategy, or gating fusion strategy) on two datasets. In terms of FMeasure, in the 32 groups of experiments, 23 groups using soft prompts outperforms the other two prompt methods, meaning 71.88% of the results can confirm this view.
+We conduct 32 supplementary experiments for RQ2, that is, randomly matching pre-trained code models (CodeBERT or CodeT5), pre-trained text models (BERT or StenceBERT), and model fusion strategies (weighted average fusion strategy, attention fusion strategy, splicing fusion strategy, or gating fusion strategy) on two datasets. In terms of F-Measure, in the 32 groups of experiments, 23 groups using soft prompts outperforms the other two prompt methods, meaning 71.88% of the results can confirm this view.
 
 #### For RQ3
 
